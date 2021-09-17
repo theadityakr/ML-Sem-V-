@@ -1,0 +1,52 @@
+Using scaled batch gradient without regularisation
+Initial coefficients: 
+[0, 0, 0, 0]
+Final coefficients are:
+[7730.872053867435, 8069.264303687423, 11077.015405893277, 18485.569122447192]
+Mean absolute percentage error is : 18.30641888247704
+
+Using scaled batch gradient with regularisation
+Initial coefficients: 
+[0, 0, 0, 0]
+Final coefficients are:
+[5037.585668619078, 11147.667574879839, 10378.580439168689, 22647.298983883848]
+Mean absolute percentage error is : 19.92701396456417
+
+Using Stochastic gradient without regularisation
+Initial coefficients: 
+[0, 0, 0, 0]
+Final coefficients are:
+[18648.663069990776, 15073.501985961251, 15766.862790309351, 22357.23427068568]
+Mean absolute percentage error is : 32.87903970192347
+
+Using Stochastic gradient with regularisation
+Initial coefficients: 
+[0, 0, 0, 0]
+
+Warning (from warnings module):
+  File "D:\Sem 5\ML\ass6\q6c.py", line 104
+    itr = itr + Coeff[j]*FeaturesTrain[j]
+RuntimeWarning: overflow encountered in double_scalars
+
+Warning (from warnings module):
+  File "D:\Sem 5\ML\ass6\q6c.py", line 152
+    TempCoeff[j] = (1 - LearningRate * LambdaParameter) * TempCoeff[j] - (LearningRate * (SlopeStoch(Coeff, FeaturesTrain[i], PriceTrain[i], j)))
+RuntimeWarning: overflow encountered in double_scalars
+
+Warning (from warnings module):
+  File "D:\Sem 5\ML\ass6\q6c.py", line 152
+    TempCoeff[j] = (1 - LearningRate * LambdaParameter) * TempCoeff[j] - (LearningRate * (SlopeStoch(Coeff, FeaturesTrain[i], PriceTrain[i], j)))
+RuntimeWarning: invalid value encountered in double_scalars
+Final coefficients are:
+[nan, nan, nan, nan]
+Mean absolute percentage error is : nan
+
+Using Scaled Minibatch gradient without regularisation for batch size = 20
+Final coefficients are:
+[6340.552295015755, 2827.87646125345, 15916.90159915714, 10968.772912396124]
+Mean absolute percentage error is : 20.275262089497147
+
+Using Scaled Minibatch gradient with regularisation for batch size = 20
+Final coefficients are:
+[888.9201243627547, 5168.211726125255, 17701.360814619125, 15202.387873756412]
+Mean absolute percentage error is : 19.550681895981263
